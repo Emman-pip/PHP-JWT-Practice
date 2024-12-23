@@ -3,8 +3,10 @@
         "firebase/php-jwt": "^6.10"
     },
 		"autoload": {
-			"psr4": {
-				"MainProject\\": "src/"
+			"psr-4": {
+				"MainProject\\": "src/",
+				"MainProject\\Utils\\": "src/Utils/",
+				"MainProject\\Views\\": "src/Views/"
 			}
 		}
 }

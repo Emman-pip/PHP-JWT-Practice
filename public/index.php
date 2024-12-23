@@ -1,14 +1,12 @@
 <?php
 
-namespace MainProject;
-
 require_once __DIR__ . "/../vendor/autoload.php";
 
 
 header("Content-Type:application/json");
 header("Access-Control-Add-Origin:*");
 
-$viewsDir = "/../src/MainProject/views/";
+$viewsDir = "/../src/Views/";
 $request = $_SERVER["REQUEST_URI"];
 switch ($request) {
 	case '/':
