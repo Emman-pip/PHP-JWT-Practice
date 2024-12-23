@@ -6,6 +6,11 @@ This repository is mainly to practice using JWT for API usage and development.
 - written using PHP
 - will be using an sqlite database
 
+## Database Schema
+```sql
+CREATE TABLE Users(userId int primary key not null, username text not null, password varchar(64) not null);
+CREATE TABLE Tasks(taskId int primary key not null, taskName text not null, description text not null, lastUpdated DATETIME not null, ownerId int not null, FOREIGN KEY (ownerId) REFERENCES Users(userId));
+```
 ## TODO 
 - [x] create jwt keys
     - [ ] create secret key in a .env file
