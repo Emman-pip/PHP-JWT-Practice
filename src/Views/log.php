@@ -9,6 +9,9 @@ use MainProject\Utils\TokenUtils;
 
 require_once __DIR__ . "/../../vendor/autoload.php";
 
+if ($_SERVER["REQUEST_METHOD"] !== "POST") {
+	throw new Exception("Invalid HTTP method.");
+}
 
 $env = parse_ini_file(__DIR__ . "/../../.env");
 
