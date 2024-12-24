@@ -1,5 +1,5 @@
 # JSON Web Token Usage Practice
-This repository is mainly to practice using JWT for API usage and development. 
+This repository is made to mainly to practice using JWT for API usage and development. 
 
 ## TLDR;
 - this is an API that uses JWT for authentcation
@@ -18,9 +18,14 @@ CREATE TABLE Tasks(taskId INTEGER PRIMARY KEY, taskName text not null, descripti
     - [x] read the .env and access secret key
     - [x] place the credentials on the payload
 - [x] create decoders
-- [ ] create classes for verification
-  - [ ] recreate token and compare
-  - [ ] throw error for invalid credentials
+- [x] create classes for verification
+  - [x] recreate token and compare
+  - [x] throw error for invalid credentials
 - [x] send data with JWT as element in the header
 - [x] connect to database
   - [x] create database (sqlite)
+- [ ] task operations
+  - [x] read tasks
+  - [ ] create tasks
+  - [ ] update tasks
+  - [ ] delete tasks 
