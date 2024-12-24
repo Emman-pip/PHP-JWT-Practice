@@ -8,17 +8,19 @@ This repository is mainly to practice using JWT for API usage and development.
 
 ## Database Schema
 ```sql
-CREATE TABLE Users(userId int primary key not null, username text not null, password varchar(64) not null);
-CREATE TABLE Tasks(taskId int primary key not null, taskName text not null, description text not null, lastUpdated DATETIME not null, ownerId int not null, FOREIGN KEY (ownerId) REFERENCES Users(userId));
+CREATE TABLE sqlite_sequence(name,seq);
+CREATE TABLE Users(userId INTEGER PRIMARY KEY AUTOINCREMENT, username text not null unique, password varchar(64) not null);
+CREATE TABLE Tasks(taskId INTEGER PRIMARY KEY, taskName text not null, description text not null, lastUpdated DATETIME not null, owner text not null, FOREIGN KEY (owner) REFERENCES Users(username));
 ```
 ## TODO 
 - [x] create jwt keys
-    - [ ] create secret key in a .env file
-    - [ ] read the .env and access secret key
+    - [x] create secret key in a .env file
+    - [x] read the .env and access secret key
+    - [x] place the credentials on the payload
 - [x] create decoders
 - [ ] create classes for verification
-  - [ ]recreate token and compare
+  - [ ] recreate token and compare
   - [ ] throw error for invalid credentials
-- [ ] send data with JWT as element in the header
-- [ ] connect to database
-  - [ ] create database (sqlite)
+- [x] send data with JWT as element in the header
+- [x] connect to database
+  - [x] create database (sqlite)
