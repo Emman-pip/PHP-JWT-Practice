@@ -15,7 +15,7 @@ class Database
 			$db->exec($sql);
 			return true;
 		} catch (Exception $err) {
-			throw new Exception("Database error.");
+			throw new Exception("Database error: executeing query\n" . $sql . "\n" . $err);
 		}
 	}
 
