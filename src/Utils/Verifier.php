@@ -14,6 +14,6 @@ class Verifier
 		if (!TokenUtils::verifyToken($token)) {
 			throw new Exception("Invalid token");
 		}
-		header("bearer:." . $token);
+		header("bearer:" . $token);
 	}
 }

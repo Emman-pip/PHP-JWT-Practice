@@ -4,6 +4,10 @@ require_once __DIR__ . "/../vendor/autoload.php";
 
 header("Content-Type:application/json");
 header("Access-Control-Add-Origin:*");
+header("Access-Control-Allow-Origin:*");
+header("Access-Control-Expose-Headers: bearer");
+header("Access-Control-Allow-Headers: bearer");
+
 
 use MainProject\Utils\TaskOperations;
 
